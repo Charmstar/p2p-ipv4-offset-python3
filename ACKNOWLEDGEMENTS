@@ -1,0 +1,11 @@
+Posititve Acknowledgement:
+
+When RECEIVER's nrceive.py receives a bintranslatedbinaryout file that decrypts without errors, RECEIVER sends a mutually defined positive acknowledgement back to SENDER.
+
+As a suggested positive acknowledgement, use nsendit.py to send back the entire bintranslatedbinaryout file that was just decrypted. If one file transfer in one diretion is error-free then chances are very good to be error-free on the return IP path.
+
+Negative Acknowledgement:
+
+No response means negative acknowledgement.
+
+A short plaintext message back to the message encryptor to help describe the negative acknowledgement will remain mostly readable after the expected dropped or mis-sequenced SYN packets in the reverse direction. "Received 578 of Expected 580" or "Wrong Key. Unknown secret key for the gpg -r recipient."
