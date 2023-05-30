@@ -25,4 +25,4 @@ cat bin*        --displays plaintext when SENDER decides the only option is plai
 hexdump bin*    --displays a binary file when cat bin* is not plaintext ASCII characters
 
 A SENDER at either end must know their RECEIVER's IPv4 network address at the other end. Both ends require
-root access to their SSH server to run psython3 nreceive.py and python3 nsendit.py IP4DEST FILE.
+root access to their SSH server to run python3 nreceive.py and python3 nsendit.py IP4DEST FILE.
