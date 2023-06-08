@@ -1,0 +1,14 @@
+Posititve Acknowledgement:
+
+When RECEIVER's nreceive.py receives a bintranslatedbinaryout file that decrypts without errors or warnings, RECEIVER sends a mutually defined positive acknowledgement back to SENDER.
+
+As a suggested positive acknowledgement, use nsendit.py to send back the entire bintranslatedbinaryout file that was just decrypted. If one file transfer in one diretion is
+error-free then chances are very good to be clear channels and error-free on the return IP path.
+
+Negative Acknowledgement:
+
+No response by RECEIVER means negative acknowledgement. A mutually agreed timeout at SENDER (e.g. 10 minutes from last packet sent) allows time for RECEIVER to compose an 
+encrypted or plaintext, positive or negative acknowledgement. SENDER should attempt at least one more try if no response from RECEIVER and then waits 10 minutes after each. 
+
+A short plaintext message back to the message encryptor to help describe a negative acknowledgement will remain mostly readable after any expected dropped or mis-sequenced
+SYN packets in the reverse direction are received. "Received 579 of LENGTH 580 packets" or "Wrong Key. Unknown secret key for the gpg -r recipient used in encryption."
