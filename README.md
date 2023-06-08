@@ -16,9 +16,9 @@ examines the accumulated bintranslatedbinaryout file:
 
 wc bin*         --does this indicate any dropped packets? Expect almost all IP end-points to be clear channels.
 
-gpg -d bin*     --if length is correct but decryption fails or gives a warning anyway, then try:
+gpg -d bin*     --if length is correct but decryption fails or gives a warning, then try:
 
-unzip bin*      --if unzip fails, then try:
+unzip bin*      --if unzip fails, try to zip bin* then unzip to remove a warning, or else try:
 
 cat bin*        --displays plaintext when SENDER decides the best option, or the only option, is plaintext
 
