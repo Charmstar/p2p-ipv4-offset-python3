@@ -91,7 +91,8 @@ while 1:
    Z=codecs.encode(FH.read(1), 'hex')
    X=Z+Y #byte swap needed for little-endian CPU to send in network order
    time.sleep(0.1) #slow down fast sender for slow receiver
-   print(X)
+#   time.sleep(0.25) #may prevent dropped packets due to buffer overrun  
+    print(X)
    if X==b'':
       FH.close()
       exit()
