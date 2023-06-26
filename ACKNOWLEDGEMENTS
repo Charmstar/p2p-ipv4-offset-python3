@@ -3,8 +3,8 @@ Posititve Acknowledgement:
 When RECEIVER's nreceive.py receives a bintranslatedbinaryout file that decrypts without errors or warnings, RECEIVER sends a mutually defined positive acknowledgement back
 to SENDER.
 
-As a suggested positive acknowledgement, use nsendit.py to send back the entire bintranslatedbinaryout file that was just decrypted. If one file transfer in one diretion is
-error-free then chances are very good to be clear channels and error-free on the return IP path.
+As a suggested positive acknowledgement, use nsendit.py to send back the entire bintranslatedbinaryout file that was just decrypted. This could potentially create a false
+positive if SENDER's nreceive.py is still running. As a rule to be safe, each end should have python3 nreceive.py always on, except when python3 nsendit.py is sending.
 
 Negative Acknowledgement:
 
