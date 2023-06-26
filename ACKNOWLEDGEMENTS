@@ -4,7 +4,8 @@ When RECEIVER's nreceive.py receives a bintranslatedbinaryout file that decrypts
 to SENDER.
 
 As a suggested positive acknowledgement, use nsendit.py to send back the entire bintranslatedbinaryout file that was just decrypted. This could potentially create a false
-positive if SENDER's nreceive.py is still running. As a rule to be safe, each end should have python3 nreceive.py always on, except when python3 nsendit.py is sending.
+positive if SENDER's nreceive.py is still running while nsendit.py is sending. As a rule to be safe, each end should have python3 nreceive.py always on, except when 
+python3 nsendit.py is sending.
 
 Negative Acknowledgement:
 
